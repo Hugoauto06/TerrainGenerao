@@ -74,7 +74,7 @@ namespace TerrainGenerator
 
                 if (char.ToLower(InputCharacter) == 'd')
                 {
-                    player1.X += 1;
+                    player1.X += 1; 
                 }
             }
         }
