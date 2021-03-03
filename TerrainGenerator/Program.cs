@@ -15,33 +15,9 @@ namespace TerrainGenerator
             Console.SetWindowSize(160, 40);
             Console.CursorVisible = false;
 
-            Random r = new Random();
-            int rInt = r.Next(0, 2);
-            int WindowSize = Console.WindowWidth * Console.WindowHeight;
-
             // Generator
-            for (int i = 0; i < WindowSize; i++)
-            {
-                rInt = r.Next(0, 2);
-                if (rInt == 0)
-                {
-                    Console.BackgroundColor = ConsoleColor.Green;
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.Write("…");
-                }
-                if (rInt == 1)
-                {
-                    Console.BackgroundColor = ConsoleColor.DarkGreen;
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("¸");
-                }
-                if (rInt == 2)
-                {
-                    Console.BackgroundColor = ConsoleColor.Green;
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.Write("„");
-                }
-            }
+            GenerateTerrain terrain = new GenerateTerrain();
+            terrain.CreateTerrain();
 
             // inputs and Drawing Player
 
