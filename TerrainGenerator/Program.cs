@@ -54,7 +54,7 @@ namespace TerrainGenerator
 
                 InputCharacter = Console.ReadKey().KeyChar;
 
-                if (char.ToUpper(InputCharacter) == 'W') 
+                if (char.ToLower(InputCharacter) == 'w') 
                 {
                     if (player1.Y > 0)
                     {
@@ -62,17 +62,17 @@ namespace TerrainGenerator
                     }
                 }
 
-                if (char.ToUpper(InputCharacter) == 'A')
+                if (char.ToLower(InputCharacter) == 'a')
                 {
                     player1.X -= 1;
                 }
 
-                if (char.ToUpper(InputCharacter) == 'S')
+                if (char.ToLower(InputCharacter) == 's')
                 {
                     player1.Y += 1;
                 }
 
-                if (char.ToUpper(InputCharacter) == 'D')
+                if (char.ToLower(InputCharacter) == 'd')
                 {
                     player1.X += 1;
                 }
