@@ -56,10 +56,7 @@ namespace TerrainGenerator
 
                 if (char.ToLower(InputCharacter) == 'w') 
                 {
-                    if (player1.Y > 0)
-                    {
-                        player1.Y -= 1;
-                    }
+                    player1.Y -= 1;
                 }
 
                 if (char.ToLower(InputCharacter) == 'a')
@@ -76,6 +73,8 @@ namespace TerrainGenerator
                 {
                     player1.X += 1; 
                 }
+
+                Math.Clamp(player1.Y, 0, Console.WindowHeight);
             }
         }
     }
